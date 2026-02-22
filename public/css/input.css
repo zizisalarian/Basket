@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --font-Vazir: "Vazir";
+  --font-IOS-Font: "IOS-Font";
+  --font-Vazir-Light: "Vazir-Light";
+  --font-Vazir-Medium: "Vazir-Medium";
+  --font-Vazir-Bold: "Vazir-Bold";
+  --font-Ios-15-Semibold: "Ios-15-Semibold";
+  --font-Ios-15-Regular: "Ios-15-Regular";
+  --font-Ios-15-Bold: "Ios-15-Bold";
+
+  --breakpoint-*: initial;
+  --breakpoint-xs: 457px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+@utility container {
+  @apply mx-auto;
+}
+
+body {
+  @apply bg-black min-h-screen;
+}
+
+#root {
+  @apply min-h-screen  relative! z-5325234234325! text-white! font-Ios-15-Regular;
+}
+
+.product-card {
+  @apply w-full bg-gradient-to-b odd:bg-gradient-to-t  odd:**:[.orb]:bg-purple-500/30 flex items-center justify-center flex-col **:[.orb]:animate-pulse relative from-zinc-950! to-zinc-700 rounded-lg border p-4 border-zinc-300/10;
+}
+
+button {
+  @apply cursor-pointer;
+}
+/* 
+.orb {
+  @apply size-[50%] rounded-full blur-3xl bg-rose-500/40 absolute top-[10%]!  my-auto;
+} */
+*/
+/* 
+.product-header {
+  @apply w-full h-[240px] overflow-hidden rounded-lg bg-zinc-900 relative z-10;
+}
+
+.product-main {
+  @apply py-4 space-y-3 relative z-10;
+}
+
+.product-footer {
+  @apply mt-4 flex items-center justify-between grow w-full!; 
+}
+
+.product-card\.price {
+  @apply text-emerald-600 flex items-end font-Ios-15-Bold! gap-0.5;
+}
+
+
+/* .primary-button {
+  @apply inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 bg-black transition duration-150 ease-in-out text-white border border-gray-300/10 rounded-md focus:outline-none focus:border-blue-300/20 active:bg-gray-800;
+}
+
+.active-btn {
+  @apply bg-gray-800;
+} */
+/* 
+.bg-linears {
+  @apply fixed z-0 bg-black bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px];
+}
+
+.bg-orb {
+  @apply fixed z-0 left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)];
+} */
+/* 
+.breadcrumb-list {
+  @apply flex w-full flex-wrap items-center rounded-md bg-zinc-900 px-4 py-2;
+}
+
+.breadcrumb-item {
+  @apply flex cursor-pointer items-center text-sm text-zinc-400 transition-colors duration-300 hover:text-zinc-400;
+}
+
+.seperator {
+  @apply pointer-events-none mx-2 text-zinc-400;
+} */
+/* .dropdown {
+  @apply z-50000 relative inline-block text-right;
+}
+
+.dropdown-popup {
+  @apply absolute right-0 w-[400px] mt-2 bottom-full! bg-black border border-gray-200/10 divide-y divide-gray-100/10 rounded-md shadow-lg outline-none;
+}
+
+.small-dropdown {
+  @apply w-[200px]! max-w-[200px] overflow-hidden;
+
+  * {
+    @apply p-3 duration-300 hover:bg-zinc-700/30 cursor-pointer text-start grow w-full! text-sm;
+  }
+}
+
+.basket-product {
+  @apply w-full h-25! bg-zinc-900 grow p-2 rounded-md;
+}
+
+.basket-product\.content {
+  @apply flex items-center gap-3 h-full!;
+}
+
+.basket-product\.cover {
+  @apply w-20! min-w-20 h-full bg-zinc-700 rounded-lg;
+}
+
+.basket-product-content\.details {
+  @apply h-full flex justify-between flex-col;
+}
+
+.basket-product-title {
+  @apply font-Ios-15-Semibold!;
+}
+
+.basket-product-desc {
+  @apply text-xs line-clamp-1 font-Vazir-Light! opacity-70;
+}
+
+.basket-product\.footer {
+  @apply mt-3 text-sm! flex items-center justify-between;
+} */
+
+.emerald-text {
+  @apply text-emerald-600;
+}
+
+.red-text {
+  @apply text-red-600 cursor-pointer;
+}
+
+.content-between {
+  @apply py-3 flex grow items-center justify-between px-3;
+}
+
+/* .clear-button {
+  @apply text-sm px-3 py-1.5 rounded-md bg-rose-500 cursor-pointer duration-150 hover:bg-rose-600/50 pb-2;
+} */
+
+.total-price-parent {
+  @apply flex items-center gap-1;
+}
+
+/* .badge {
+  @apply absolute -top-0 -right-2 rounded-full size-5 flex items-center justify-center bg-red-700;
+} */
+
+/* .product-caption {
+  @apply font-Vazir-Light! opacity-70 line-clamp-3 select-none text-sm;
+} */
+
+.xl-text {
+  @apply text-2xl font-Vazir-Bold!;
+}
+
+.normal-padding {
+  @apply p-3 space-y-1;
+}

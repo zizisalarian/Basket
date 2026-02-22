@@ -1,0 +1,22 @@
+.bg-linears {
+    position: fixed;
+    top: calc(var(--spacing) * 0);
+    right: calc(var(--spacing) * 0);
+    bottom: calc(var(--spacing) * 0);
+    left: calc(var(--spacing) * 0);
+    z-index: 0;
+    background-color: var(--color-black);
+    background-image: linear-gradient(to right,#4f4f4f2e 1px,transparent 1px),linear-gradient(to bottom,#8080800a 1px,transparent 1px);
+    background-size: 14px 24px;
+  }
+  .bg-orb {
+    position: fixed;
+    top: -10%;
+    right: calc(var(--spacing) * 0);
+    left: calc(var(--spacing) * 0);
+    z-index: 0;
+    height: 1000px;
+    width: 1000px;
+    border-radius: calc(infinity * 1px);
+    background-image: radial-gradient(circle 400px at 50% 300px,#fbfbfb36,#000);
+  }
