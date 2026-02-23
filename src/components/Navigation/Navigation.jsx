@@ -1,6 +1,6 @@
 import "./Navigation.css";
 
-function Navigation() {
+function Navigation({cart , removeProduct , clearBasket}) {
   return (
     <div id="navigation">
       {/* <!-- Sabzlearn --> */}
@@ -134,7 +134,7 @@ function Navigation() {
             <span>
               <i className="fa-solid fa-cart-shopping"></i>
             </span>
-            <span className="badge"> 1 </span>
+            <span className="badge"> {cart.length} </span>
           </button>
         </span>
         {/* <!-- Basket --> */}
@@ -142,53 +142,56 @@ function Navigation() {
           <div className="dropdown-popup" role="menu">
             <div className="px-4 total-price-parent py-3">
               <p className="text-sm leading-5">سبد خرید</p>
-              <span id="product-count">(0)</span>
+              <span id="product-count">({cart.length})</span>
             </div>
             <div className="normal-padding">
-              {/* <!-- Basket Product --> */}
+              {cart.length ? cart.map(({img , title , description , price , id})=>
               <article tabIndex="1" className="basket-product">
                 <div className="basket-product.content">
                   <div className="basket-product.cover">
                     <img
-                      src="./public/images/20-library.png"
+                      src={img}
                       className="size-full object-cover"
                       alt=""
                     />
                   </div>
                   <div className="basket-product-content.details">
                     <div>
-                      <p className="basket-product-title">دوره متخصص ری‌اکت</p>
-                      <p className="basket-product-desc">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                        چاپ، و
-                      </p>
+                      <p className="basket-product-title">{title}</p>
+                      <p className="basket-product-desc">{description}</p>
                     </div>
                     <div className="basket-product.footer">
                       <div className="emerald-price">
-                        <span>600,000</span>
+                        <span>{price}</span>
                         <span>ت</span>
                       </div>
-                      <button className="red-text">
+                      <button className="red-text" onClick={()=>removeProduct(id)}>
                         <i className="fa-solid fa-trash"></i>
                       </button>
                     </div>
                   </div>
                 </div>
               </article>
+              ): "محصولی در سبد وجود ندارد" }
+              
+              
               {/* <!-- Basket Product --> */}
             </div>
+            {cart.length &&
             <div className="content-between">
-              <button className="clear-button">پاکسازی سبد خرید</button>
+              <button className="clear-button" onClick={()=>clearBasket()}>پاکسازی سبد خرید</button>
               <div className="total-price-parent">
                 <span> مبلغ کل: </span>
                 <div className="flex items-center">
                   <span className="text-lg text-emerald-600 font-Vazir-Bold!">
-                    600,000
+                    {cart.reduce((prev , curr)=>prev+curr.price , 0 ).toLocaleString("fa-IR")}
                   </span>
                   <span className="text-sm text-emerald-500">ت</span>
                 </div>
               </div>
             </div>
+            }
+            
           </div>
         </div>
       </div>
